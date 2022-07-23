@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:iaq/utils/styles.dart';
 import 'package:iaq/utils/widgets/custom_rounded_button.dart';
 import 'package:iaq/utils/widgets/visit_website_button.dart';
+import 'package:line_icons/line_icon.dart';
+import 'package:line_icons/line_icons.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -32,10 +34,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
               const Spacer(),
 
-              CustomRoundedButton(text: 'Call', width: 0.3, borderRadius: 25,  textColor: greenColor),
+              CustomRoundedButton(text: 'Call', iconData: LineIcons.phone, width: 0.3, borderRadius: 25,  textColor: greenColor),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 15),
-                child: CustomRoundedButton(text: 'Book Appointment', width: 0.6, borderRadius: 25, textColor: primaryColor, ),
+                child: CustomRoundedButton(text: 'Book Appointment', iconData: LineIcons.calendarWithDayFocus, width: 0.6, borderRadius: 25, textColor: primaryColor, ),
               ),
 
               const Padding(
