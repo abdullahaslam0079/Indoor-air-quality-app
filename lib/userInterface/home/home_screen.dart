@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:iaq/provider/user_provider.dart';
 import 'package:iaq/utils/styles.dart';
 import 'package:iaq/utils/widgets/custom_rounded_button.dart';
 import 'package:iaq/utils/widgets/visit_website_button.dart';
-import 'package:line_icons/line_icon.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -13,6 +14,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+    UserProvider _userProvider = Provider.of<UserProvider>(context, listen: false);
+    _userProvider.changeIsOnboardedStatus(true);
+  }
+
   @override
   Widget build(BuildContext context) {
     Size med = MediaQuery.of(context).size;
