@@ -18,12 +18,12 @@ class CustomRoundedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size med = MediaQuery.of(context).size;
     return SizedBox(
-      width: med.width,
+      // width: med.width,
       height: med.height*0.07,
       child: ElevatedButton(
         onPressed: callBack,
         style: ElevatedButton.styleFrom(
-          primary: Colors.grey.shade400,
+          primary: greenColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),

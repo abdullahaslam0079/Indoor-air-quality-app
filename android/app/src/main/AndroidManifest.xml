@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
 
     <application
-        android:label="iaq"
+        android:label="IQA Testing Company"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

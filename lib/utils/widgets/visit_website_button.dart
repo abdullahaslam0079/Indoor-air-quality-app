@@ -10,19 +10,15 @@ class VisitWebsiteButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size med = MediaQuery.of(context).size;
     return SizedBox(
-      width: med.width,
+      width: med.width*0.7,
       height: med.height*0.07,
       child: ElevatedButton(
         onPressed: () async{
-          const url = 'www.IAQTestingCompany.com';
-          if (await canLaunch(url)) {
+          const url = 'http://www.IAQTestingCompany.com';
           await launch(url);
-          } else {
-          throw 'Could not launch $url';
-          }
         },
         style: ElevatedButton.styleFrom(
-          primary: Colors.grey.shade400,
+          primary: greenColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25),
           ),
@@ -36,17 +32,17 @@ class VisitWebsiteButton extends StatelessWidget {
               Image.asset('assets/images/webIcon.jpg',
                 scale: 20,
                 fit: BoxFit.cover,
-                color: Colors.black,
+                color: whiteColor,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Text(
                   'Website',
-                  style: bigHeadingTextStyle.copyWith(color: Colors.black),
+                  style: bigHeadingTextStyle.copyWith(color: whiteColor),
                 ),
               ),
               const Spacer(),
-              const Icon(Icons.arrow_right_alt, color: Colors.black,)
+              const Icon(Icons.arrow_right_alt, color: whiteColor)
             ],
           ),
         ),

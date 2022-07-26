@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iaq/provider/user_provider.dart';
+import 'package:iaq/storage/sharedPref.dart';
 import 'package:iaq/userInterface/splash_screen/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async{
-  SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Color(0xfffaf9f9),
-        statusBarIconBrightness: Brightness.dark,
-      ));
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitDown,
-    DeviceOrientation.portraitUp,
-  ]);
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Color(0xfffaf9f9), statusBarIconBrightness: Brightness.dark,));
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitDown, DeviceOrientation.portraitUp,]);
+  SharedPrefs().init();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
   runApp(const MyApp());
 }
 

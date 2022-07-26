@@ -4,7 +4,6 @@ import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:iaq/userInterface/home/home_screen.dart';
 import 'package:iaq/utils/styles.dart';
 
-
 class OnBoardingScreen extends StatelessWidget {
   final Color kDarkBlueColor = primaryColor;
 
@@ -96,7 +95,8 @@ class OnBoardingScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 15),
                 child: Center(
-                  child: Image.asset('assets/images/logo1.jpg',
+                  child: Image.asset(
+                    'assets/images/logo1.jpg',
                     fit: BoxFit.cover,
                     height: 80,
                   ),
@@ -105,13 +105,12 @@ class OnBoardingScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                'The best Indoor air quality testing company in USA',
+              Text(
+                'The Indoor air quality testing company',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18.0,
+                style: headingTextStyle.copyWith(
                   fontWeight: FontWeight.w600,
+                  color: Colors.black,
                 ),
               ),
             ],
@@ -129,7 +128,8 @@ class OnBoardingScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 15),
                 child: Center(
-                  child: Image.asset('assets/images/logo1.jpg',
+                  child: Image.asset(
+                    'assets/images/logo1.jpg',
                     fit: BoxFit.cover,
                     height: 80,
                   ),
@@ -138,13 +138,12 @@ class OnBoardingScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
+              Text(
                 'Certified - Licensed - Insured\nAffordable - Friendly - Professional',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18.0,
+                style: headingTextStyle.copyWith(
                   fontWeight: FontWeight.w600,
+                  color: Colors.black,
                 ),
               ),
             ],
@@ -162,7 +161,8 @@ class OnBoardingScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 15),
                 child: Center(
-                  child: Image.asset('assets/images/logo1.jpg',
+                  child: Image.asset(
+                    'assets/images/logo1.jpg',
                     fit: BoxFit.cover,
                     height: 80,
                   ),
@@ -171,13 +171,12 @@ class OnBoardingScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
+              Text(
                 'Checkout our services in USA',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18.0,
+                style: headingTextStyle.copyWith(
                   fontWeight: FontWeight.w600,
+                  color: Colors.black,
                 ),
               ),
             ],
