@@ -9,9 +9,10 @@ class CustomRoundedButton extends StatelessWidget {
   final double width;
   final double borderRadius;
   final IconData iconData;
+  final VoidCallback callBack;
   Color textColor;
   Color backgroundColor;
-  CustomRoundedButton({Key? key, required this.text, required this.width, required this.borderRadius, this.backgroundColor = whiteColor, this.textColor = primaryColor, required this.iconData}) : super(key: key);
+  CustomRoundedButton({Key? key, required this.text, required this.width, required this.borderRadius, this.backgroundColor = whiteColor, this.textColor = primaryColor, required this.iconData, required this.callBack}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class CustomRoundedButton extends StatelessWidget {
       width: med.width,
       height: med.height*0.07,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: callBack,
         style: ElevatedButton.styleFrom(
           primary: Colors.grey.shade400,
           shape: RoundedRectangleBorder(

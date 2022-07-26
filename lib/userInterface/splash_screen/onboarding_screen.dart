@@ -6,7 +6,7 @@ import 'package:iaq/utils/styles.dart';
 
 
 class OnBoardingScreen extends StatelessWidget {
-  final Color kDarkBlueColor = const Color(0xFF053149);
+  final Color kDarkBlueColor = primaryColor;
 
   const OnBoardingScreen({Key? key}) : super(key: key);
 
@@ -52,17 +52,26 @@ class OnBoardingScreen extends StatelessWidget {
       headerBackgroundColor: Colors.white,
       pageBackgroundColor: Colors.white,
       background: <Widget>[
-        Image.asset(
-          'assets/images/logo.jpg',
-          height: 400,
+        Padding(
+          padding: const EdgeInsets.only(left: 5),
+          child: Image.asset(
+            'assets/images/logo.jpg',
+            height: 400,
+          ),
         ),
-        Image.asset(
-          'assets/images/logo.jpg',
-          height: 400,
+        Padding(
+          padding: const EdgeInsets.only(left: 5),
+          child: Image.asset(
+            'assets/images/logo.jpg',
+            height: 400,
+          ),
         ),
-        Image.asset(
-          'assets/images/logo.jpg',
-          height: 400,
+        Padding(
+          padding: const EdgeInsets.only(left: 5),
+          child: Image.asset(
+            'assets/images/logo.jpg',
+            height: 400,
+          ),
         ),
       ],
       speed: 1.8,
@@ -73,13 +82,25 @@ class OnBoardingScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              const SizedBox(
+              /*const SizedBox(
                 height: 480,
               ),
               Text(
                 'IAQ Testing Company',
                 textAlign: TextAlign.center,
                 style: bigHeadingTextStyle,
+              ),*/
+              const SizedBox(
+                height: 420,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: Center(
+                  child: Image.asset('assets/images/logo1.jpg',
+                    fit: BoxFit.cover,
+                    height: 80,
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -88,7 +109,7 @@ class OnBoardingScreen extends StatelessWidget {
                 'The best Indoor air quality testing company in USA',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.black26,
+                  color: Colors.black,
                   fontSize: 18.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -103,12 +124,16 @@ class OnBoardingScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               const SizedBox(
-                height: 480,
+                height: 420,
               ),
-              Text(
-                'IAQ Testing Company',
-                textAlign: TextAlign.center,
-                style: bigHeadingTextStyle,
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: Center(
+                  child: Image.asset('assets/images/logo1.jpg',
+                    fit: BoxFit.cover,
+                    height: 80,
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -117,7 +142,7 @@ class OnBoardingScreen extends StatelessWidget {
                 'Certified - Licensed - Insured\nAffordable - Friendly - Professional',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.black26,
+                  color: Colors.black,
                   fontSize: 18.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -132,12 +157,16 @@ class OnBoardingScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               const SizedBox(
-                height: 480,
+                height: 420,
               ),
-              Text(
-                'IAQ Testing Company',
-                textAlign: TextAlign.center,
-                style: bigHeadingTextStyle
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: Center(
+                  child: Image.asset('assets/images/logo1.jpg',
+                    fit: BoxFit.cover,
+                    height: 80,
+                  ),
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -146,7 +175,7 @@ class OnBoardingScreen extends StatelessWidget {
                 'Checkout our services in USA',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.black26,
+                  color: Colors.black,
                   fontSize: 18.0,
                   fontWeight: FontWeight.w600,
                 ),

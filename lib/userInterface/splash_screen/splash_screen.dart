@@ -37,19 +37,29 @@ class _SplashScreenState extends State<SplashScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(right: 10),
+            padding: const EdgeInsets.only(left: 5),
             child: Center(
               child: Image.asset('assets/images/logo.jpg',
                 fit: BoxFit.cover,
               ),
             ),
           ),
-          Text('IAQ',
+
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Center(
+              child: Image.asset('assets/images/logo1.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+
+          /*Text('IAQ',
             style: bigTitleTextStyle,
           ),
           Text('Testing Company',
             style: bigTitleTextStyle,
-          ),
+          ),*/
         ],
       ),
     );

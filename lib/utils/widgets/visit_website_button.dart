@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:iaq/utils/styles.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class VisitWebsiteButton extends StatelessWidget {
   const VisitWebsiteButton({Key? key}) : super(key: key);
@@ -12,7 +13,14 @@ class VisitWebsiteButton extends StatelessWidget {
       width: med.width,
       height: med.height*0.07,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () async{
+          const url = 'www.IAQTestingCompany.com';
+          if (await canLaunch(url)) {
+          await launch(url);
+          } else {
+          throw 'Could not launch $url';
+          }
+        },
         style: ElevatedButton.styleFrom(
           primary: Colors.grey.shade400,
           shape: RoundedRectangleBorder(
