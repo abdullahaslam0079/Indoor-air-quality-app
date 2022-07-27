@@ -10,7 +10,7 @@ class VisitWebsiteButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size med = MediaQuery.of(context).size;
     return SizedBox(
-      width: med.width*0.7,
+      // width: med.width*0.7,
       height: med.height*0.07,
       child: ElevatedButton(
         onPressed: () async{

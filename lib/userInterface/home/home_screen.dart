@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ServicesModel(webUrl: 'https://www.epa.gov/mold', service: 'Mold'),
     ServicesModel(webUrl: 'https://www.epa.gov/report-environment/outdoor-air-quality', service: 'Outdoor Pollutants'),
     ServicesModel(webUrl: 'https://www.epa.gov/radon', service: 'Radon'),
-    ServicesModel(webUrl: '', service: 'Vapor Intrusion'),
+    ServicesModel(webUrl: 'https://www.epa.gov/vaporintrusion', service: 'Vapor Intrusion'),
     ServicesModel(webUrl: 'https://www.epa.gov/standards-water-body-health/what-are-water-quality-standards#:~:text=Water%20quality%20standards%20(WQS)%20are,will%20be%20protected%20or%20achieved.', service: 'Water Quality'),
   ];
 
@@ -82,8 +82,8 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               Center(
-                child: Text('We Test for',
-                  style: bigTitleTextStyleWhite,
+                child: Text('Scroll and click on what we test for',
+                  style: bigTitleTextStyleWhite.copyWith(fontSize: 18),
                 ),
               ),
 
@@ -155,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       const uri = 'sms:+1 870-613-7001?body=I need service for ';
                       await launch(uri);
                     },
-                    iconData: LineIcons.phone,
+                    iconData: Icons.message,
                     width: 0.3,
                     borderRadius: 25,
                     textColor: whiteColor,
@@ -177,12 +177,66 @@ class _HomeScreenState extends State<HomeScreen> {
                   textColor: whiteColor,
                 ),
               ),
-              Center(
-                child: const Padding(
-                  padding: EdgeInsets.only(bottom: 30),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  SizedBox(
+                    // width: med.width,
+                    height: med.height*0.07,
+                    child: ElevatedButton(
+                      onPressed: ()async{
+                        const url = 'http://www.IAQTestingCompany.com';
+                        await launch(url);
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: greenColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        elevation: 15.0,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            Image.asset('assets/images/webIcon.jpg',
+                              scale: 20,
+                              fit: BoxFit.cover,
+                              color: whiteColor,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 10),
+                              child: Text('Website',
+                                style: bigHeadingTextStyle.copyWith(color: whiteColor),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  CustomRoundedButton(
+                    text: 'Pay',
+                    callBack: () async{
+                      const url = 'http://www.IAQTestingCompany.com';
+                      await launch(url);
+                    },
+                    iconData: LineIcons.moneyBill,
+                    width: 0.3,
+                    borderRadius: 25,
+                    textColor: whiteColor,
+                  ),
+                ],
+              ),
+              /*Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 30),
                   child: VisitWebsiteButton(),
                 ),
-              ),
+              ),*/
             ],
           ),
         ),
